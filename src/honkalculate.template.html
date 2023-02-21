@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Pok&eacute;mon Damage Calculator</title>
+    <title>LumiPlat Damage Calculator</title>
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/colvis/1.1.1/css/dataTables.colVis.css" />
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css?" />
+																			   
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26211653-3"></script>
     <script>
@@ -29,11 +30,9 @@
 
 <div class="header"><div class="header-inner">
     <ul class="nav">
-        <li><a class="button nav-first" href="//pokemonshowdown.com"><img src="./img/pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
-        <li><a class="button" href="//dex.pokemonshowdown.com">Pok&eacute;dex</a></li>
-        <li><a class="button" href="//replay.pokemonshowdown.com/">Replays</a></li>
-        <li><a class="button" href="//pokemonshowdown.com/ladder/">Ladder</a></li>
-        <li><a class="button nav-last" href="//pokemonshowdown.com/forums/">Forum</a></li>
+        <li><a class="button nav-first" href="https://luminescent.team/docs"><img src="./img/lumiLogo.png" alt="Pok&eacute;mon LumiPlat Showdown! (beta)" /> Docs</a></li>
+        <li><a class="button" href="https://discord.gg/luminescent">Discord</a></li>
+        <li><a class="button nav-last" href="https://www.nexusmods.com/pokemonbdsp/mods/1">Download</a></li>
     </ul>
     <ul class="nav nav-play">
         <li><a class="button greenbutton nav-first nav-last" href="//play.pokemonshowdown.com/">Play</a></li>
@@ -43,8 +42,9 @@
 <div class="wrapper">
 
     <div>
-        <span class="title-text">Pok&eacute;mon Damage Calculator</span>
+        <span class="title-text">Luminescent Platinum Damage Calculator</span>
         <span class="genSelection" aria-labelledby="selectGenInstruction" role="radiogroup" title="Select the generation.">
+																								 
             <input class="gen visually-hidden" type="radio" name="gen" value="1" id="gen1" /><label class="btn btn-small btn-left" for="gen1">RBY</label>
             <input class="gen visually-hidden" type="radio" name="gen" value="2" id="gen2" /><label class="btn btn-small btn-mid" for="gen2">GSC</label>
             <input class="gen visually-hidden" type="radio" name="gen" value="3" id="gen3" /><label class="btn btn-small btn-mid" for="gen3">ADV</label>
@@ -55,7 +55,13 @@
 			   <input class="gen visually-hidden" type="radio" name="gen" value="8" id="gen8" /><label class="btn btn-small btn-mid" for="gen8">S/S</label>
 			   <input class="gen visually-hidden" type="radio" name="gen" value="9" id="gen9" checked="checked" /><label class="btn btn-small btn-right gen-specific g9" for="gen9">S/V</label>
         </span>
+																																		  
+																										   
+																																										 
+																																												 
+			   
         <span class="modeSelection" aria-labelledby="selectModeInstruction" role="radiogroup" title="Select the calculator's mode of function.">
+																													 
             <input class="mode visually-hidden" type="radio" name="mode" id="one-vs-one" /><label class="btn btn-left" for="one-vs-one">One vs One</label>
             <input class="mode visually-hidden" type="radio" name="mode" id="one-vs-all" /><label class="btn btn-mid" for="one-vs-all">One vs All</label>
             <input class="mode visually-hidden" type="radio" name="mode" id="all-vs-one" /><label class="btn btn-mid" for="all-vs-one">All vs One</label>
@@ -66,18 +72,58 @@
     <div>
         <span class="title-text">Tier(s)/Format: </span>
         <span class="tiers" title="Select the tier(s)/format.">
+				  
+				 
             <input class="visually-hidden" type="radio" name="tier" id="VGC17" /><label class="btn btn-left gen-specific g7" for="VGC19">VGC 19</label>
+																							
+														   
+				  
+				 
             <input class="visually-hidden" type="radio" name="tier" id="Doubles" /><label class="btn btn-mid gen-specific g5 g6 g7 g8 g9" for="Doubles">Doubles</label>
+																							
+														   
+				  
+				 
             <input class="visually-hidden" type="radio" name="tier" id="LC" /><label class="btn btn-mid gen-specific g4 g5 g6 g7 g8 g9" for="LC">LC</label>
+																							
+														   
+				  
+				 
             <input class="visually-hidden" type="checkbox" name="tier" id="PU" /><label class="btn btn-mid gen-specific g6 g7 g8 g9" for="PU">PU</label>
             <input class="visually-hidden" type="checkbox" name="tier" id="NU" /><label class="btn btn-mid gen-specific g3 g4 g5 g6 g7 g8 g9" for="NU">NU</label>
+														   
+				  
+			  
+																							
+																																		  
+				  
+				 
             <input class="visually-hidden" type="checkbox" name="tier" id="RU" /><label class="btn btn-mid gen-specific g5 g6 g7 g8 g9" for="RU">RU</label>
+																							
+														   
+				  
+				 
             <input class="visually-hidden" type="checkbox" name="tier" id="UU" /><label class="btn btn-mid" for="UU">UU</label>
+																							
+														   
+				  
+				 
             <input class="visually-hidden" type="checkbox" name="tier" id="OU" /><label class="btn btn-mid" for="OU">OU</label>
+																							
+														   
+				  
+				 
             <input class="visually-hidden" type="checkbox" name="tier" id="Uber" /><label class="btn btn-right" for="Uber">Uber</label>
+																							   
     </span>
+				  
+			  
     </div>
 
+																	 
+			  
+																																			  
+			  
 </div>
 
     <div class="panel-group" id="accordion">
@@ -580,21 +626,498 @@
                         </select>
                     </div>
                 </div>
+								  
+															 
+																					
+					  
             </div>
+									
+					   
+						   
+							
+									 
+													 
+																						   
+																						   
+																					
+									 
+									 
+							 
+							
+						   
+									   
+											
+												 
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																								 
+								 
+															  
+								 
+									 
+							 
+									   
+											
+													 
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+									   
+											
+													  
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+																		 
+											
+													  
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+																		 
+											
+													  
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																								 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+															
+											
+													  
+								 
+								
+																			   
+								 
+								
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+									   
+											
+													
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+																 
+								 
+							 
+							
+						
+				  
+												   
+															
+														
+																	  
+																			 
+																
+																	   
+																		 
+																	   
+																			 
+															  
+																		   
+																				
+																		 
+																		   
+																		 
+																	 
+																		   
+																	   
+																		   
+																		 
+																			 
+																		 
+															  
+																	   
+																			 
+																		 
+																
+																		 
+							 
+					  
+															
+														  
+																								 
+																													  
+					  
+															   
+													
+																						   
+					  
+					 
+														
+																	  
+																
+																  
+																			  
+															  
+																	
+															  
+															  
+							 
+																							   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+														 
+														 
+														 
+														 
+														 
+														 
+							 
+					  
+				  
+									
+														   
+																														
+																	   
+																							
+															 
+															 
+			
+					  
+												
+				  
+																								 
+																			  
+							   
+																				 
+																 
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
+							   
+																				 
+																
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
+							   
+																				 
+																
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
+							   
+																				 
+																
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
         </fieldset>
+		  
+
         <fieldset class="panel panel-default field-info">
+														  
             <legend class="panel-heading panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">>  Field</a>
             </legend>
             <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
                     <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
+																													 
                         <input class="visually-hidden" type="radio" name="format" value="Singles" id="singles-format" />
                         <label class="btn btn-left" for="singles-format">Singles</label>
                         <input class="visually-hidden" type="radio" name="format" value="Doubles" id="doubles-format" />
                         <label class="btn btn-right" for="doubles-format">Doubles</label>
                     </div>
                     <div class="gen-specific g6 g7 g8 g9" title="Select the current terrain.">
+																												  
                         <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Electric" id="electric" /><label class="btn btn-xxxwide btn-left" for="electric">Electric Terrain</label>
                         <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Grassy" id="grassy" /><label class="btn btn-xxxwide btn-mid" for="grassy">Grassy Terrain</label>
                         <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Misty" id="misty" /><label class="btn btn-xxxwide btn-right" for="misty">Misty Terrain</label>
@@ -603,6 +1126,7 @@
                         <input class="visually-hidden terrain-trigger calc-trigger" type="checkbox" name="terrain" value="Psychic" id="psychic" /><label class="btn btn-xxxwide btn-mid" for="psychic">Psychic Terrain</label>
                     </div>
 						  <div aria-labelledby="selectRuinInstruction" class="gen-specific g9 format-specific doubles" role="group" style="margin: 5px auto auto;" title="Select the ruin abilities from other Pok&eacute;mon on the field.">
+																				  
 								<span class="visually-hidden" id="selectRuinInstruction">Select the active Ruin abilities from other Poke&eacute;mon on the field.</span>
 								<input class="visually-hidden calc-trigger" type="checkbox" name="ruin" value="Beads" id="beads" />
 								<label class="btn btn-xxxwide btn-left" for="beads">Beads of Ruin</label>
@@ -669,8 +1193,95 @@
                             <label class="btn btn-xwide" for="steelsurgeR">Steelsurge</label>
                         </div>
                     </div>
+						
+																																																		   
+																															   
+																																		  
+																					 
+																														 
+																				 
+																														   
+																				   
+																														   
+																					 
+					  
+																													  
+																						  
+																							
+																																		 
+																							  
+																																		   
+																								 
+					  
+																															   
+																					 
+																																	 
+																	
+					  
                     <div class="btn-group gen-specific g3 g4 g5 g6 g7 g8 g9">
+									 
+						   
+							
+																										   
+																										   
+							 
+							
+						   
+																
+																																 
+																											
+																																					   
+																						   
+									   
+																											 
+																																					   
+																						   
+									   
+							 
+													
+																															  
+																										  
+																																							  
+																								 
+									   
+																										   
+																																							  
+																								 
+									   
+							 
+													
+																																		   
+																												  
+																																						  
+																									  
+																																						  
+																							 
+									   
+																												   
+																																						  
+																							
+																																						  
+																									   
+									   
+							 
+													
+																																			  
+																												   
+																																							 
+																									   
+																																							 
+																							   
+									   
+																													
+																																							 
+																							  
+																																							 
+																										
+									   
+							 
+																   
                         <div class="left" title="Are there Spikes on this side of the field?">
+																																								 
                             <input class="visually-hidden" type="radio" name="spikesL" value="0" id="spikesL0" checked="checked" />
                             <label class="btn btn-xsmall btn-left" for="spikesL0">0</label>
                             <input class="visually-hidden" type="radio" name="spikesL" value="1" id="spikesL1" />
@@ -703,6 +1314,7 @@
                     </div>
                     <div class="btn-group">
                         <div class="left" title="Is this Pok&eacute;mon protected by Reflect and/or Light Screen?">
+																																			   
                             <input class="visually-hidden" type="checkbox" id="reflectL" />
                             <label class="btn btn-left" for="reflectL">Reflect</label>
                             <input class="visually-hidden" type="checkbox" id="lightScreenL" />
@@ -717,6 +1329,7 @@
                     </div>
                     <div class="btn-group gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
                         <div class="left" title="Is this Pok&eacute;mon protected?">
+																												 
                             <input class="visually-hidden" type="checkbox" id="protectL" />
                             <label class="btn btn-wide" for="protectL">Protect</label>
                         </div>
@@ -727,6 +1340,7 @@
                     </div>
                     <div class="btn-group">
                         <div class="left" title="Has this Pok&eacute;mon been affected by Leech Seed?">
+																																	  
                             <input class="visually-hidden" type="checkbox" id="leechSeedL" />
                             <label class="btn btn-wide" for="leechSeedL">Leech Seed</label>
                         </div>
@@ -737,6 +1351,7 @@
                     </div>
                     <div class="btn-group gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
                         <div class="left" title="Has this Pok&eacute;mon been revealed with Foresight or Odor Sleuth?">
+																																				   
                             <input class="visually-hidden" type="checkbox" id="foresightL" />
                             <label class="btn btn-wide" for="foresightL">Foresight</label>
                         </div>
@@ -747,6 +1362,7 @@
                     </div>
                     <div class="btn-group gen-specific g3 g4 g5 g6 g7 g8 g9">
                         <div class="left" title="Has this Pok&eacute;mon's power been boosted by an ally's Helping Hand?">
+																																						   
                             <input class="visually-hidden" type="checkbox" id="helpingHandL" />
                             <label class="btn btn-xxwide" for="helpingHandL">Helping Hand</label>
                         </div>
@@ -757,6 +1373,7 @@
                     </div>
                     <div class="btn-group gen-specific g4 g5 g6 g7 g8 g9">
                         <div class="left" title="Has this Pok&eacute;mon's speed been boosted by Tailwind?">
+																																						
                             <input class="visually-hidden" type="checkbox" id="tailwindL" />
                             <label class="btn btn-xxwide" for="tailwindL">Tailwind</label>
                         </div>
@@ -778,6 +1395,7 @@
                     </tr>
                     <div class="btn-group gen-specific g5 g6 g7 g8 g9">
                         <div class="left" title="Is the Pok&eacute;mon protected by an ally's Friend Guard?">
+																																			
                             <input class="visually-hidden" type="checkbox" id="friendGuardL" />
                             <label class="btn btn-xxwide" for="friendGuardL">Friend Guard</label>
                         </div>
@@ -788,6 +1406,7 @@
                     </div>
                     <div class="btn-group gen-specific g7 g8 g9">
                         <div class="left" title="Is the Pok&eacute;mon protected by an ally's Aurora Veil?">
+																																	   
                             <input class="visually-hidden" type="checkbox" id="auroraVeilL" />
                             <label class="btn btn-xxwide" for="auroraVeilL">Aurora Veil</label>
                         </div>
@@ -798,6 +1417,7 @@
                     </div>
                     <div class="btn-group gen-specific g7 g8 g9">
                         <div class="left" title="Has this Pok&eacute;mon's power been boosted by an ally's Battery ability?">
+																																		 
                             <input class="visually-hidden" type="checkbox" id="batteryL" />
                             <label class="btn btn-xxwide" for="batteryL">Battery</label>
                         </div>
@@ -805,8 +1425,10 @@
                             <input class="visually-hidden" type="checkbox" id="batteryR" />
                             <label class="btn btn-xxwide" for="batteryR">Battery</label>
                         </div>
+							 
                         <div class="btn-group gen-specific g8 g9">
                             <div class="left" title="Has this Pok&eacute;mon's power been boosted by an ally's Power Spot ability?">
+																																			  
                                 <input class="visually-hidden" type="checkbox" id="powerSpotL" />
                                 <label class="btn btn-xxwide" for="powerSpotL">Power Spot</label>
                             </div>
@@ -817,14 +1439,36 @@
                         </div>
                         <div class="btn-group gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
                             <div class="left" title="Is the defending Pok&eacute;mon switching out?">
+																															  
                                 <input class="visually-hidden" type="checkbox" id="switchingL" />
                                 <label class="btn btn-xxwide" for="switchingL">Switching out</label>
                             </div>
                             <div class="right" title="Is the defending Pok&eacute;mon switching out?">
                                 <input class="visually-hidden" type="checkbox" id="switchingR" />
                                 <label class="btn btn-xxwide" for="switchingR">Switching out</label>
+									   
+							 
+							
+																								 
+																	
+									   
+																								   
+																	
                             </div>
+							 
+							
+						
+					   
                     </div>
+													
+										  
+															   
+																				
+											  
+																				   
+																	  
+																											  
+						   
                 </div>
             </div>
         </fieldset>
@@ -834,7 +1478,37 @@
             <legend class="panel-heading panel-title">Damage Results</legend>
             <table class="hide display" id="holder-2">
                 <thead>
+																						  
+																   
+				   
+										
+					 
+									   
+																									
+																									
+																													   
+					  
+								  
+										
+																
+					  
+								  
+										 
+																																				  
+					  
+					 
+													  
+																				 
+					  
+								  
+															 
+																					
+					  
+				  
+									
+					   
                     <tr>
+							
                         <th></th>
                         <th>Best Move</th>
                         <th>Damage (%)</th>
@@ -844,9 +1518,459 @@
                         <th>Type 2</th>
                         <th>Ability</th>
                         <th>Item</th>
+						   
+									   
+											
+												 
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																								 
+								 
+															  
+								 
+									 
+							 
+									   
+											
+													 
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+									   
+											
+													  
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+																		 
+											
+													  
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+																		 
+											
+													  
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																								 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+															
+											
+													  
+								 
+								
+																			   
+								 
+								
+																			 
+								 
+															  
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+							 
+									   
+											
+													
+								 
+								
+																			   
+								 
+																	   
+																			 
+								 
+																	   
+																													 
+								 
+																
+																			 
+								 
                     </tr>
+								 
+								
+																   
+																 
+																 
+																 
+																 
+																 
+																 
+																					 
+																  
+																  
+																  
+																  
+																  
+																  
+										 
+								 
+																 
+								 
+							 
+							
                 </thead>
             </table>
+												   
+															
+														
+																	  
+																			 
+																
+																	   
+																		 
+																	   
+																			 
+															  
+																		   
+																				
+																		 
+																		   
+																		 
+																	 
+																		   
+																	   
+																		   
+																		 
+																			 
+																		 
+															  
+																	   
+																			 
+																		 
+																
+																		 
+							 
+					  
+															
+														  
+																								 
+																													  
+					  
+															   
+													
+																						   
+					  
+					 
+														
+																	  
+																
+																  
+																			  
+															  
+																	
+															  
+															  
+							 
+																							   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+														 
+														 
+														 
+														 
+														 
+														 
+							 
+					  
+				  
+									
+														   
+																														
+																	   
+																							
+															 
+															 
+			
+					  
+												
+				  
+							   
+																				 
+																 
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
+							   
+																				 
+																
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
+							   
+																				 
+																
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
+							   
+																				 
+																
+																
+																				  
+															  
+															
+						 
+																																			  
+																													 
+																																 
+																												  
+															
+													 
+													 
+													 
+													 
+						 
+																												  
+												   
+													
+													  
+													  
+													  
+						 
+																																											   
+													
+												   
+													
+													  
+													  
+													  
+						 
+				  
         </fieldset>
     </div>
     <script type="text/javascript">
@@ -902,11 +2026,13 @@
     <script type="text/javascript" src="./calc/index.js?"></script>
     <script type="text/javascript" src="./js/shared_controls.js?"></script>
     <script type="text/javascript" src="./js/honkalculate_controls.js?"></script>
+																				  
+	  
 
-    <div style="clear:both;padding:20px;text-align:left">Created by Honko, maintained by Austin and Kris
+    <div style="clear:both;padding:20px;text-align:left">Created by Honko, maintained by Austin and Kris. Modified for Luminescent Platinum by Aaron
         <ul><li><a href="https://github.com/smogon/damage-calc/contributors" target="_blank">Contributors</a></li>
-        <li><a href="https://www.smogon.com/forums/threads/pok%C3%A9mon-showdown-damage-calculator.3593546/" target="_blank">Bug Reports</a></li>
-        <li><a href="https://github.com/smogon/damage-calc" target="_blank">GitHub repository</a></li></ul>
+        <li><a href="https://www.smogon.com/forums/threads/pok%C3%A9mon-showdown-damage-calculator.3593546/" target="_blank">Smogon Calc Bug Reports</a></li>
+        <li><a href="https://github.com/AarCon/LumiPlatDamageCalc" target="_blank">GitHub repository</a></li></ul>
     </div>
 
 </body>

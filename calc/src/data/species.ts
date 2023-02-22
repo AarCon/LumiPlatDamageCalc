@@ -1,4 +1,4 @@
-﻿import * as I from './interface';
+import * as I from './interface';
 import {toID, extend, DeepPartial, assignWithout} from '../util';
 
 export interface SpeciesData {
@@ -8977,10 +8977,13 @@ const PLA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
 };
 
-const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
+
+const LP: { [name: string]: SpeciesData } = extend(true, {}, SS, PLA_PATCH);
+
+const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     //Gen 1 Pokemon
     Arbok: { bs: { at: 110, df: 70, sa: 55, sd: 80 } },
-    Beedrill: { bs: { at: 115, sa: 40, sd: 95, sdp: 95 } },
+    Beedrill: { bs: { at: 115, sa: 40, sd: 95, sp: 95 } },
     Blastoise: { types: ['Water', 'Steel'], bs: { sa: 90 } },
     Butterfree: { bs: { df: 45, sa: 110, sd: 100, sp: 90 } },
     Charizard: { types: ['Fire', 'Dragon'], bs: { sa: 110 } },
@@ -9002,11 +9005,11 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     Pidgeot: { bs: { at: 60, df: 70, sa: 115, sp: 102 } },
     Pidgeotto: { bs: { at: 50, df: 50, sa: 65 } },
     Pidgey: { bs: { at: 35, df: 35, sa: 50 } },
-    Primeape: { bs: { sd: 60, sp: 105 } },
+    Primeape: { bs: { sd: 60, sp: 105 }, nfe: true },
     Raichu: { bs: { at: 95, sa: 95 } },
     Raticate: { bs: { at: 97, df: 70, sa: 45, sp: 113 } },
     Seaking: { bs: { at: 75, df: 75, sa: 102, sd: 75, sp: 78 } },
-    Tauros: { bs: { sa: 70 } },
+    Tauros: { bs: { sa: 70 }, otherFormes: ['Tauros-Paldea', 'Tauros-Paldea-Fire', 'Tauros-Paldea-Water'] },
     Venomoth: { bs: { at: 55, sa: 100 } },
     Venusaur: { bs: { sa: 110 } },
     Wigglytuff: { bs: { at: 80, df: 55, sa: 95, sd: 60, sp: 55 } },
@@ -9018,7 +9021,7 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     Azumarill: { bs: { hp: 110, sa: 80 } },
     Corsola: { bs: { at: 45, df: 115, sa: 90, sd: 115 } },
     Delibird: { bs: { at: 85, df: 50, sa: 110, sd: 50, sp: 110 }, abilities: { 0: 'Technician' } },
-    Dunsparce: { types: ['Normal', 'Dragon'], bs: { hp: 105, at: 95, df: 95, sa: 55, sd: 55 } },
+    Dunsparce: { types: ['Normal', 'Dragon'], bs: { hp: 105, at: 95, df: 95, sa: 55, sd: 55 }, nfe: true },
     Feraligatr: { types: ['Water', 'Dark'], bs: { at: 110 } },
     Furret: { bs: { hp: 95, at: 85, df: 65, sa: 45, sd: 70, sp: 105 } },
     Granbull: { bs: { sd: 75 } },
@@ -9062,7 +9065,7 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     Typhlosion: { bs: { at: 79, df: 73, sa: 124, sd: 80, sp: 101 } },
     Unown: { bs: { hp: 54, at: 108, df: 54, sa: 108, sd: 54, sp: 54 } },
     Ursaring: { types: ['Normal', 'Ground'] },
-    Wooper: { bs: { at: 55, df: 55 } },
+    Wooper: { bs: { at: 55, df: 55 }, otherFormes: ['Wooper-Paldea'] },
     Xatu: { bs: { hp: 80 } },
 
 
@@ -9163,7 +9166,7 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
         weightkg: 6.3,
         nfe: true,
         abilities: { 0: 'Damp' },
-        baseSpecies: ['Gastrodon-East']
+        baseSpecies: 'Gastrodon-East'
     },
     Glaceon: {bs: { sd: 65, sp: 95 } },
     Glameow: {bs: { hp: 50, at: 65, df: 45, sa: 45, sd: 40, sp: 90 } },
@@ -9178,7 +9181,7 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     Mesprit: {types: ['Psychic', 'Fairy'] },
     'Mime Jr.': {bs: { at: 15, sa: 80, sp: 65 } },
     Mismagius: {types: ['Ghost', 'Fairy'] },
-    Mothim: {bs: { hat: 70, sa: 110, sp: 100 } },
+    Mothim: {bs: { at: 70, sa: 110, sp: 100 } },
     Pachirisu: {bs: { df: 80, sa: 80 },abilities: { 0: 'Prankster' } },
     'Porygon-Z': {bs: { at: 76, sd: 70, sp: 99 } },
     Probopass: {bs: { at: 45, sa: 85 } },
@@ -9196,7 +9199,7 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
         weightkg: 6.3,
         nfe: true,
         abilities: { 0: 'Damp' },
-        baseSpecies: ['Shellos-East']
+        baseSpecies: 'Shellos-East'
     },
     Shieldon: {bs: { at: 22, sa: 62 } },
     Toxicroak: {bs: { sp: 98 } },
@@ -9207,16 +9210,9 @@ const LP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     'Wormadam-Sandy': {bs: { hp: 60, at: 50, df: 110, sa: 110, sd: 90, sp: 30 } },
     'Wormadam-Trash': {bs: { hp: 60, at: 50, df: 100, sa: 110, sd: 100, sp: 30 } },
     Yanmega: {bs: { sd: 76 } },
-}
-
-const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Bisharp: {nfe: true},
   Cresselia: {bs: {df: 110, sd: 120}},
-  Dunsparce: {nfe: true},
   Girafarig: {nfe: true},
-  Primeape: {nfe: true},
-  Tauros: {otherFormes: ['Tauros-Paldea', 'Tauros-Paldea-Fire', 'Tauros-Paldea-Water']},
-  Wooper: {otherFormes: ['Wooper-Paldea']},
   Zacian: {bs: {at: 120}},
   'Zacian-Crowned': {bs: {at: 150}},
   Zamazenta: {bs: {at: 120}},
@@ -9986,8 +9982,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     abilities: {0: 'Gooey'},
   },
 };
-
-const LP: {[name: string]: SpeciesData} = extend(true, {}, SS, PLA_PATCH);
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
 
